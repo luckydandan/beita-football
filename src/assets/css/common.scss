@@ -1,0 +1,11 @@
+@import "base/reset.inc.mob";
+@import "base/media.query";
+@import "base/config";
+@import "base/class";
+
+@at-root {
+    .all-img {
+        width: 100%;
+        vertical-align: top;
+    }
+}
