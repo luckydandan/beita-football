@@ -12,7 +12,7 @@ export default new Router({
     },
     {
       path: '/home',
-      component: () => import('@/views/home/Home.vue'),
+      component: resolve => require(['@/views/home/Home.vue'], resolve),
       meta: {
         keepAlive: true,
         title: '首页'

@@ -1,17 +1,106 @@
-//@import "../../assets/css/base/config";
-//@at-root {
-//    .top {
-//        padding: rem($base-padding--horizontal);
-//        background: #327838;
-//        .loading {
-//            margin-left: rem(20px);
-//        }
-//        .ico-loading {
-//            width: rem(26px);
-//            height: rem(23px);
-//            background: url(../../assets/images/ico-loading.png) no-repeat;
-//            background-size: contain;
-//        }
-//
-//    }
-//}
+@import "../../assets/css/base/config";
+@at-root {
+    .top {
+        padding: rem($base-padding--horizontal) rem($base-padding--horizontal) 0;
+        background: #327838;
+        .top-btn {
+            width: 100%;
+            font-size: 0;
+            text-align: right;
+        }
+        .loading {
+            display: inline-block;
+            margin-left: rem(20px);
+        }
+        .ico-loading {
+            width: rem(26px);
+            height: rem(23px);
+            background: url(../../assets/images/ico-loading.png) no-repeat;
+            background-size: contain;
+        }
+        .ico-calendar {
+            width: rem(25px);
+            height: rem(24px);
+            background: url(../../assets/images/ico-calendar.png) no-repeat;
+            background-size: contain;
+        }
+    }
+    .nav-items {
+        margin-top: rem(20px);
+        display: flex;
+        width: 100%;
+        .nav-item {
+            flex: 1;
+            margin: 0 rem(20px);
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: rem(16px);
+            line-height: rem(50px);
+            font-weight: bold;
+        }
+        .nav-current {
+            border-bottom: rem(4px) solid #f8b62d;
+        }
+    }
+    /*直播列表*/
+    .live-item-top {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        padding-top: rem(30px);
+        margin-bottom: rem(10px);
+        font-size: rem(14px);
+        color: #1a1a1a;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: rem(-2.5px);
+            width: rem(5px);
+            height: rem(23px);
+            background: url(../../assets/images/Oval.png) no-repeat;
+            background-size: contain;
+        }
+    }
+    .live-item {
+        padding: 0 rem($base-padding--horizontal);
+        background: #fff;
+        .live-item-message {
+            display: flex;
+            align-items: center;
+            height: rem(60px);
+            font-size: 0;
+        }
+        .message-country, .message-score{
+            font-size: rem(14px);
+            color: $color;
+            box-sizing: border-box;
+        }
+        .message-score {
+            flex: 1;
+            text-align: center;
+        }
+        .message-country {
+            width: rem(80px);
+        }
+        .country-score {
+            display: inline-block;
+            font-size: rem(24px);
+            color: $color;
+            vertical-align: middle;
+            font-weight: bold;
+            margin: 0 rem(10px);
+
+        }
+        .country-item {
+            display: inline-block;
+            vertical-align: middle;
+            width: rem(30px);
+            height: rem(30px);
+        }
+
+    }
+
+}
