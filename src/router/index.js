@@ -7,16 +7,20 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      redirect: '/home'
+        path: '/',
+        redirect: '/home'
     },
     {
-      path: '/home',
-      component: resolve => require(['@/views/home/Home.vue'], resolve),
-      meta: {
-        keepAlive: true,
-        title: '首页'
-      }
+        path: '/home',
+        component: resolve => require(['@/views/home/Home.vue'], resolve),
+        meta: {
+            keepAlive: true,
+            title: '首页'
+        }
+    },
+    {
+        path: '/analysis/analysis',
+        component: resolve => require(['@/views/analysis/analysis.vue'], resolve),
     }
   ]
 })

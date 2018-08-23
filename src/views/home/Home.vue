@@ -17,11 +17,68 @@
                     <div class="live-item-message">
                         <p class="message-country tal">塞尔塔</p>
                         <p class="message-score">
-                            <span class="country-item"><img src="../../assets/images/logo-Celt.png" class="all-img" alt=""></span>
+                            <span class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></span>
                             <span class="country-score">1-2</span>
-                            <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" class="all-img" alt=""></span>
+                            <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></span>
                         </p>
                         <p class="message-country tar">巴塞罗那</p>
+                    </div>
+                    <div class="live-process">
+                        <div class="bar" style="background:red;width:30%;height:20px;"></div>
+                    </div>
+                    <div class="live-time">
+                        <p class="live-time-d">
+                            <i class="icon ico-time"></i>
+                            <span>比赛时间</span>
+                        </p>
+                        <router-link to="../analysis/analysis" tag="p" class="live-time-m">
+                            <span>比赛分析</span>
+                            <i class="icon ico-link"></i>
+                        </router-link>
+                    </div>
+                </div>
+                <div class="live-item mtop">
+                    <div class="live-item-message">
+                        <p class="message-country tal">塞尔塔</p>
+                        <p class="message-score">
+                            <span class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></span>
+                            <span class="country-score">1-2</span>
+                            <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></span>
+                        </p>
+                        <p class="message-country tar">巴塞罗那</p>
+                    </div>
+                    <div class="live-process"></div>
+                    <div class="live-time">
+                        <p class="live-time-d">
+                            <i class="icon ico-time"></i>
+                            <span>比赛时间</span>
+                        </p>
+                        <router-link to="../analysis/analysis" tag="p" class="live-time-m">
+                            <span>比赛分析</span>
+                            <i class="icon ico-link"></i>
+                        </router-link>
+                    </div>
+                </div>
+                <div class="live-item mtop">
+                    <div class="live-item-message">
+                        <p class="message-country tal">塞尔塔</p>
+                        <p class="message-score">
+                            <span class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></span>
+                            <span class="country-score">1-2</span>
+                            <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></span>
+                        </p>
+                        <p class="message-country tar">巴塞罗那</p>
+                    </div>
+                    <div class="live-process"></div>
+                    <div class="live-time">
+                        <p class="live-time-d">
+                            <i class="icon ico-time"></i>
+                            <span>比赛时间</span>
+                        </p>
+                        <router-link to="../analysis/analysis" tag="p" class="live-time-m">
+                            <span>比赛分析</span>
+                            <i class="icon ico-link"></i>
+                        </router-link>
                     </div>
                 </div>
             </div>

@@ -65,8 +65,9 @@
         }
     }
     .live-item {
-        padding: 0 rem($base-padding--horizontal);
+        padding: 0 rem($base-padding--horizontal) rem(10px);
         background: #fff;
+        border-bottom: 1px solid #cacaca;
         .live-item-message {
             display: flex;
             align-items: center;
@@ -94,13 +95,44 @@
             margin: 0 rem(10px);
 
         }
-        .country-item {
-            display: inline-block;
-            vertical-align: middle;
-            width: rem(30px);
-            height: rem(30px);
-        }
 
+
+        .live-time {
+            margin-top: rem(18px);
+            display: flex;
+            justify-content: space-between;
+            line-height: 1;
+        }
+        .live-time-d {
+            span {
+                display: inline-block;
+                font-size: rem(10px);
+                color: $color;
+                vertical-align: middle;
+            }
+        }
+        .ico-time {
+            width: rem(10px);
+            height: rem(10px);
+            background: url(../../assets/images/ico-time.png) no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+        }
+        .live-time-m {
+            span {
+                display: inline-block;
+                font-size: rem(12px);
+                color: #327838;
+                vertical-align: middle;
+            }
+        }
+        .ico-link {
+            width: rem(25px);
+            height: rem(10px);
+            background: url(../../assets/images/ico-link.png) no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+        }
     }
 
 }

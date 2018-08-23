@@ -1,13 +1,16 @@
 <template>
     <div class="footer">
       <router-link to="/home" tag="div" exact>
-        <span>比赛列表</span>
+        <i class="icon ico-match"></i>
+        <span class="foot-text">比赛列表</span>
       </router-link>
       <router-link to="/list" tag="div">
-        <span>会员中心</span>
+          <i class="icon ico-account"></i>
+          <span class="foot-text">会员中心</span>
       </router-link>
       <router-link to="/collect" tag="div">
-        <span>关于我们</span>
+          <i class="icon ico-about"></i>
+          <span class="foot-text">关于我们</span>
       </router-link>
     </div>
 </template>
@@ -31,27 +34,32 @@
   align-items: center 水平居中
   flex: 1 每份占1
 -->
-<style scoped lang="less">
-  .footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 50px;
-    width: 100%;
-    display: flex;
-    border-top: 1px solid #ccc;
-    div{
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      justify-content: center;
-      align-items: center;
-    }
-    i{
-      font-size: 20px;
-    }
+<style scoped lang="scss">
+    @import "../assets/css/base/_config.scss";
     .isActive {
-      color: red
+      color: #327838
     }
-  }
+    .foot-text {
+        font-size: rem(10px);
+        color: #9b9b9b;
+    }
+    .ico-match {
+        width: rem(40px);
+        height: rem(40px);
+        background: url(../assets/images/ico-match.png) center center no-repeat;
+        background-size: rem(24px);
+    }
+    .ico-account {
+        width: rem(40px);
+        height: rem(40px);
+        background: url(../assets/images/ico-account.png) center center no-repeat;
+        background-size: rem(24px);
+    }
+    .ico-about {
+        width: rem(40px);
+        height: rem(40px);
+        background: url(../assets/images/ico-about.png) center center no-repeat;
+        background-size: rem(33px) rem(17px);
+    }
+
 </style>
