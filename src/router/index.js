@@ -18,9 +18,9 @@ export default new Router({
             title: '首页'
         }
     },
-    {
-        path: '/analysis/analysis',
-        component: resolve => require(['@/views/analysis/analysis.vue'], resolve),
-    }
+    // {
+    //     path: '/analysis/analysis',
+    //     component: resolve => require(['@/views/analysis/analysis.vue'], resolve),
+    // }
   ]
 })

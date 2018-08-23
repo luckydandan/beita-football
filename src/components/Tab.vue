@@ -1,17 +1,17 @@
 <template>
     <div class="footer">
       <router-link to="/home" tag="div" exact>
-        <i class="icon ico-match"></i>
-        <span class="foot-text">比赛列表</span>
+        <i class="icon ico-match-current"></i>
+        <span class=" foot-text-current">比赛列表</span>
       </router-link>
-      <router-link to="/list" tag="div">
+      <div>
           <i class="icon ico-account"></i>
           <span class="foot-text">会员中心</span>
-      </router-link>
-      <router-link to="/collect" tag="div">
+      </div>
+      <div>
           <i class="icon ico-about"></i>
           <span class="foot-text">关于我们</span>
-      </router-link>
+      </div>
     </div>
 </template>
 <script>
@@ -43,11 +43,21 @@
         font-size: rem(10px);
         color: #9b9b9b;
     }
+    .foot-text-current {
+      font-size: rem(10px);
+      color: #327838
+    }
     .ico-match {
         width: rem(40px);
         height: rem(40px);
         background: url(../assets/images/ico-match.png) center center no-repeat;
         background-size: rem(24px);
+    }
+    .ico-match-current {
+      width: rem(40px);
+      height: rem(40px);
+      background: url(../assets/images/ico-match-current.png) center center no-repeat;
+      background-size: rem(24px);
     }
     .ico-account {
         width: rem(40px);
