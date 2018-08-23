@@ -28,6 +28,9 @@
             align-items: center;
         }
     }
+    .main {
+        padding-bottom: rem(30px);
+    }
     .country-item {
         display: inline-block;
         vertical-align: middle;
@@ -35,11 +38,31 @@
         height: rem(30px);
     }
     .live-process {
+        margin-top: rem(12px);
+        position: relative;
         width: 100%;
+        padding: 1px;
         height: rem(8px);
         border: 1px solid #9b9b9b;
         border-radius: rem(20px);
-        overflow: hidden;
+        //overflow: hidden;
+        box-sizing: border-box;
+    }
+    .bar {
+        width: 100%;
+        height: rem(6px);
+        background: linear-gradient(to bottom, #b4ec51, #429321)
+    }
+    .s-ball {
+        position: absolute;
+        top: 2px;
+        left: rem(20px);
+        width: rem(15px);
+        height: rem(15px);
+    }
+    .t {
+        top: rem(-12px);
+        left: rem(40px)
     }
 
 }

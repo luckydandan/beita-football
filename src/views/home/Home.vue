@@ -24,7 +24,10 @@
                         <p class="message-country tar">巴塞罗那</p>
                     </div>
                     <div class="live-process">
-                        <div class="bar" style="background:red;width:30%;height:20px;"></div>
+                        <div class="bar"></div>
+                        <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                        <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                        <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                     </div>
                     <div class="live-time">
                         <p class="live-time-d">
@@ -47,7 +50,12 @@
                         </p>
                         <p class="message-country tar">巴塞罗那</p>
                     </div>
-                    <div class="live-process"></div>
+                    <div class="live-process">
+                        <div class="bar"></div>
+                        <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                        <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                        <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                    </div>
                     <div class="live-time">
                         <p class="live-time-d">
                             <i class="icon ico-time"></i>
@@ -69,7 +77,12 @@
                         </p>
                         <p class="message-country tar">巴塞罗那</p>
                     </div>
-                    <div class="live-process"></div>
+                    <div class="live-process">
+                        <div class="bar"></div>
+                        <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                        <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                        <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                    </div>
                     <div class="live-time">
                         <p class="live-time-d">
                             <i class="icon ico-time"></i>
