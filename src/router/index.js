@@ -14,13 +14,12 @@ export default new Router({
         path: '/home',
         component: resolve => require(['@/views/home/Home.vue'], resolve),
         meta: {
-            keepAlive: true,
             title: '首页'
         }
     },
-    // {
-    //     path: '/analysis/analysis',
-    //     component: resolve => require(['@/views/analysis/analysis.vue'], resolve),
-    // }
+    {
+        path: '/analysis/analysis',
+        component: resolve => require(['@/views/analysis/analysis.vue'], resolve),
+    }
   ]
 })

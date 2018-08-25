@@ -16,4 +16,6 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## vue-calendar-component 参考： https://www.cnblogs.com/zwhgithub/p/8005414.html
+
 

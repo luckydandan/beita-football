@@ -13,7 +13,6 @@
   }
 </script>
 <style lang="scss">
-  @import "./assets/css/common.scss";
   body {
     background: #f5f5f5;
   }

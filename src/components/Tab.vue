@@ -27,13 +27,6 @@
         }
     }
 </script>
-<!--
-  display:flex
-  flex-direction: row/column
-  justify-content: center 垂直居中
-  align-items: center 水平居中
-  flex: 1 每份占1
--->
 <style scoped lang="scss">
     @import "../assets/css/base/_config.scss";
     .isActive {
