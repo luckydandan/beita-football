@@ -36,20 +36,177 @@
                 <!--<p class="sub-nav-item">球队实力</p>-->
             </nav>
             <div class="team-main mtop">
-                <!--<p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>-->
-                <!--<div class="team-info mtop">-->
-                    <!--<div class="nav-team nav-team-ye">-->
-                        <!--<span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>-->
-                        <!--<span class="nav-team-item">客队（巴塞罗那）</span>-->
-                    <!--</div>-->
-                    <!--<div class="main-team"></div>-->
-                <!--</div>-->
-              <div v-show="index===3" style="width:3rem;height:250px;margin:0 auto;"  class="chart-box">
-                1
-                <div id="myChart" ref="myChart">
-
+                <p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>
+                <div class="team-info mtop">
+                    <div class="nav-team nav-team-ye">
+                        <span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>
+                        <span class="nav-team-item">客队（巴塞罗那）</span>
+                    </div>
+                    <div class="main-team">
+                        <div class="main-team-one">
+                            <div class="scroll">
+                                <p class="team-header">
+                                    <i class="icon ico-host-score"></i>
+                                    <span class="host-text">球员评分</span>
+                                </p>
+                                <div class="team-list">
+                                    <p class="on-peo">上场队员</p>
+                                    <ul class="on-peo-list">
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="team-list">
+                                    <p class="on-peo">替补队员</p>
+                                    <ul class="on-peo-list">
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-team-one">
+                            <div class="scroll">
+                                <p class="team-header">
+                                    <i class="icon ico-host-score"></i>
+                                    <span class="host-text">球员评分</span>
+                                </p>
+                                <div class="team-list">
+                                    <p class="on-peo">上场队员</p>
+                                    <ul class="on-peo-list">
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="team-list">
+                                    <p class="on-peo">替补队员</p>
+                                    <ul class="on-peo-list">
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                        <li>
+                                            <span>13 xxx</span>
+                                            <span>-6.5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+              <!--<div v-show="index===3" style="width:3rem;height:250px;margin:0 auto;"  class="chart-box">-->
+                <!--1-->
+                <!--<div id="myChart" ref="myChart">-->
+
+                <!--</div>-->
+              <!--</div>-->
             </div>
         </section>
     </div>
