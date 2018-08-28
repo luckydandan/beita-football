@@ -35,8 +35,7 @@
                 <!--<p class="sub-nav-item">阵型战术</p>-->
                 <!--<p class="sub-nav-item">球队实力</p>-->
             </nav>
-            <div class="team-main mtop">
-<<<<<<< Updated upstream
+            <div class="team-main mtop" v-show="index!==3">
                 <p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>
                 <div class="team-info mtop">
                     <div class="nav-team nav-team-ye">
@@ -202,13 +201,6 @@
                         </div>
                     </div>
                 </div>
-              <!--<div v-show="index===3" style="width:3rem;height:250px;margin:0 auto;"  class="chart-box">-->
-                <!--1-->
-                <!--<div id="myChart" ref="myChart">-->
-
-                <!--</div>-->
-              <!--</div>-->
-=======
                 <!--<p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>-->
                 <!--<div class="team-info mtop">-->
                     <!--<div class="nav-team nav-team-ye">-->
@@ -217,11 +209,13 @@
                     <!--</div>-->
                     <!--<div class="main-team"></div>-->
                 <!--</div>-->
-              <div v-show="index===3" style="width:3.5rem;height:250px;margin:0 auto;"  class="chart-box">
-                <div id="myChart" ref="myChart"></div>
-              </div>
->>>>>>> Stashed changes
+              <!--<div v-show="index===3" style="width:3.5rem;height:250px;margin:0 auto;"  class="chart-box">-->
+                <!--<div id="myChart" ref="myChart"></div>-->
+              <!--</div>-->
             </div>
+          <div v-show="index===3" style="width:3.5rem;height:250px;margin:0 auto;"  class="chart-box">
+            <div id="myChart" ref="myChart"></div>
+          </div>
         </section>
     </div>
 </template>
