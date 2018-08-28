@@ -36,6 +36,7 @@
                 <!--<p class="sub-nav-item">球队实力</p>-->
             </nav>
             <div class="team-main mtop">
+<<<<<<< Updated upstream
                 <p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>
                 <div class="team-info mtop">
                     <div class="nav-team nav-team-ye">
@@ -207,6 +208,19 @@
 
                 <!--</div>-->
               <!--</div>-->
+=======
+                <!--<p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>-->
+                <!--<div class="team-info mtop">-->
+                    <!--<div class="nav-team nav-team-ye">-->
+                        <!--<span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>-->
+                        <!--<span class="nav-team-item">客队（巴塞罗那）</span>-->
+                    <!--</div>-->
+                    <!--<div class="main-team"></div>-->
+                <!--</div>-->
+              <div v-show="index===3" style="width:3.5rem;height:250px;margin:0 auto;"  class="chart-box">
+                <div id="myChart" ref="myChart"></div>
+              </div>
+>>>>>>> Stashed changes
             </div>
         </section>
     </div>
@@ -214,8 +228,8 @@
 <script>
   // 引入基本模板
   let echarts = require('echarts/lib/echarts')
-  // 引入柱状图组件
-  require('echarts/lib/chart/bar')
+  // 引入组件
+  require('echarts/lib/chart/radar')
   // 引入提示框和title组件
   require('echarts/lib/component/tooltip')
   require('echarts/lib/component/title')
@@ -263,19 +277,94 @@
         // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('myChart'))
         // 绘制图表
+
         myChart.setOption({
           title: {
-            text: 'ECharts 入门示例'
+            text: '历史数据统计'
           },
           tooltip: {},
-          xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+          legend: {
+            data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
           },
-          yAxis: {},
+          radar: {
+            // shape: 'circle',
+            name: {
+              textStyle: {
+                color: '#1a1a1a',
+                backgroundColor: '#f5f5f5',
+                padding: [3, 5]
+              }
+            },
+            indicator: [
+              { name: '信息技术', max: 6500},
+              { name: '信息技术', max: 16000},
+              { name: '信息技术', max: 30000},
+              { name: '信息技术', max: 38000},
+              { name: '信息技术', max: 52000},
+              { name: '信息技术', max: 25000}
+            ],
+            splitArea : {
+              show : true,
+              areaStyle : {
+                color: ['#f5f5f5']
+              }
+            },
+            splitLine : {
+              show : true,
+              lineStyle : {
+                width : 1,
+                color : ['#e1e1e1','#9a9a9a']
+                // 图表背景网格线的颜色
+              }
+            }
+          },
           series: [{
-            name: '销量',
-            type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
+            name: '预算 vs 开销',
+            type: 'radar',
+            data : [
+              {
+                value : [5000, 14000, 28000, 31000, 42000, 21000],
+                name : '实际开销',
+                areaStyle: {
+                  normal: {
+                    opacity: 0.6,
+                    color: '#c1d7ef'
+                  }
+                },
+                itemStyle: {
+                  normal: {
+                    borderColor: '#4a90e2',
+                    borderWidth: 3,
+                  }
+                },
+                lineStyle: {                // 单项线条样式。
+                  normal: {
+                    width: 0
+                  }
+                }
+                },
+              {
+                value : [4300, 10000, 28000, 35000, 50000, 19000],
+                name : '预算分配',
+                areaStyle: {
+                  normal: {
+                    opacity: 0.6,
+                    color: '#d8c99f'
+                  }
+                },
+                itemStyle: {
+                  normal: {
+                    borderColor: '#f8b62d',
+                    borderWidth: 3,
+                  }
+                },
+                lineStyle: {                // 单项线条样式。
+                  normal: {
+                    width: 0
+                  }
+                }
+              },
+            ]
           }]
         });
       }
