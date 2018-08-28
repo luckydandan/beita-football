@@ -141,6 +141,7 @@
         }
     }
     .on-peo-list {
+        padding-bottom: rem(10px);
         background: #e9e9e9;
         li {
             display: flex;
@@ -155,5 +156,78 @@
                 color: $color;
             }
         }
+    }
+    .str-title {
+        text-align: left;
+        .ico-contrast {
+            width: rem(16px);
+            height: rem(16px);
+            background: url(../../assets/images/ico-team-contrast.png) no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+        }
+        .ico-team-ball {
+            width: rem(18px);
+            height: rem(18px);
+            background: url(../../assets/images/ico-team-ball.png) no-repeat;
+            background-size: contain;
+            vertical-align: middle;
+        }
+        span {
+            vertical-align: middle;
+            font-size: rem(14px);
+            color: $color;
+        }
+    }
+    .chart-wrap {
+        padding: 0 rem($base-padding--horizontal);
+        text-align: center;
+    }
+    .chart-box-t {
+        padding-top: rem(10px);
+        margin: 0 auto;
+    }
+    .chart-box-b {
+        margin: rem(40px) auto 0;
+        padding-top: rem(10px);
+        border-top: 1px solid #c3c3c3;
+    }
+    //进攻频率
+    .pad {
+        padding: rem(20px) rem($base-padding--horizontal) 0;
+    }
+    .player-prop {
+        font-size: 0;
+        margin-right: rem(-30px);
+        li {
+            display: inline-block;
+            padding-right: rem(30px);
+            width: 50%;
+            box-sizing: border-box;
+        }
+    }
+    .player-prop-item {
+        background: #e9e9e9;
+        border-radius: rem(20px);
+        .player-prop-text {
+            padding-top: rem(10px);
+            width: 100%;
+            height: rem(56px);
+            color: #fff;
+            text-align: center;
+            font-size: rem(14px);
+            //background: #f5a623;
+            border-radius: rem(20px);
+        }
+
+        .player-prop-form {
+            height: rem(200px);
+        }
+    }
+    .yellow {
+        background: $yellow;
+    }
+    .blue {
+        background: $blue;
     }
 }

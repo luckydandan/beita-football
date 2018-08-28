@@ -1,17 +1,19 @@
 <template>
-    <div class="footer">
-      <router-link to="/home" tag="div" exact>
-        <i class="icon ico-match-current"></i>
-        <span class=" foot-text-current">比赛列表</span>
-      </router-link>
-      <div>
-          <i class="icon ico-account"></i>
-          <span class="foot-text">会员中心</span>
-      </div>
-      <div>
-          <i class="icon ico-about"></i>
-          <span class="foot-text">关于我们</span>
-      </div>
+    <div class="ftp">
+        <div class="footer">
+          <router-link to="/home" tag="div" exact>
+            <i class="icon ico-match-current"></i>
+            <span class=" foot-text-current">比赛列表</span>
+          </router-link>
+          <div>
+              <i class="icon ico-account"></i>
+              <span class="foot-text">会员中心</span>
+          </div>
+          <div>
+              <i class="icon ico-about"></i>
+              <span class="foot-text">关于我们</span>
+          </div>
+        </div>
     </div>
 </template>
 <script>
@@ -31,6 +33,9 @@
     @import "../assets/css/base/_config.scss";
     .isActive {
       color: #327838
+    }
+    .ftp {
+        padding-top: rem(100px);
     }
     .foot-text {
         font-size: rem(10px);

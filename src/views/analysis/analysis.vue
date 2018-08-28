@@ -35,10 +35,28 @@
                 <!--<p class="sub-nav-item">阵型战术</p>-->
                 <!--<p class="sub-nav-item">球队实力</p>-->
             </nav>
-            <div class="team-main mtop" v-show="index!==3">
-                <p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>
-                <div class="team-info mtop">
-                    <div class="nav-team nav-team-ye">
+            <div class="team-main mtop">
+                <div class="team-freq" v-show="index===1">
+                    <div class="chart-box-b pad">
+                        <ul class="player-prop">
+                            <li>
+                                <div class="player-prop-item ">
+                                    <p class="player-prop-text yellow">威胁进攻<br/>转化进球比例</p>
+                                    <div class="player-prop-form"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="player-prop-item ">
+                                    <p class="player-prop-text blue">威胁进攻<br/>转化进球比例</p>
+                                    <div class="player-prop-form"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="team-info" v-show="index ===2">
+                    <p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>
+                    <div class="nav-team nav-team-ye mtop">
                         <span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>
                         <span class="nav-team-item">客队（巴塞罗那）</span>
                     </div>
@@ -201,21 +219,24 @@
                         </div>
                     </div>
                 </div>
-                <!--<p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>-->
-                <!--<div class="team-info mtop">-->
-                    <!--<div class="nav-team nav-team-ye">-->
-                        <!--<span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>-->
-                        <!--<span class="nav-team-item">客队（巴塞罗那）</span>-->
-                    <!--</div>-->
-                    <!--<div class="main-team"></div>-->
-                <!--</div>-->
-              <!--<div v-show="index===3" style="width:3.5rem;height:250px;margin:0 auto;"  class="chart-box">-->
-                <!--<div id="myChart" ref="myChart"></div>-->
-              <!--</div>-->
+                <div v-show="index===3" class="nav-strength">
+                    <div class="chart-box-t" id="chart-box-t" style="width:3.3rem;height:2.5rem;">
+                        <p class="str-title" style="margin-left: -.1rem">
+                            <i class="icon ico-contrast"></i>
+                            <span>历史数据统计</span>
+                        </p>
+                        <div id="myChart"></div>
+                    </div>
+                    <div class="chart-box-b" id="chart-box-b" style="width:4rem;height:2rem;margin-left: -.25rem;">
+                        <p class="str-title" style="padding-left: .4rem;">
+                            <i class="icon ico-team-ball"></i>
+                            <span>进球时间发布</span>
+                        </p>
+                        <div id="myChartBar" style="margin-top:-.5rem;"></div>
+                    </div>
+                </div>
             </div>
-          <div v-show="index===3" style="width:3.5rem;height:250px;margin:0 auto;"  class="chart-box">
-            <div id="myChart" ref="myChart"></div>
-          </div>
+
         </section>
     </div>
 </template>
@@ -224,6 +245,7 @@
   let echarts = require('echarts/lib/echarts')
   // 引入组件
   require('echarts/lib/chart/radar')
+  require('echarts/lib/chart/bar')
   // 引入提示框和title组件
   require('echarts/lib/component/tooltip')
   require('echarts/lib/component/title')
@@ -237,18 +259,30 @@
     },
     mounted () {
       this.$nextTick(() => {
-        this.drawLine()
+        this.drawRadar()
+        this.drawBar()
       })
 
-      var chartBox = document.getElementsByClassName('chart-box')[0]
-      var myChartsize = document.getElementById('myChart')
-      myChartsize.style.width = chartBox.style.width
-      myChartsize.style.height = chartBox.style.height
+      var chartBox = this.getObj('chart-box-t'),
+          chartBoxBar = this.getObj('chart-box-b'),
+          myChartsize = this.getObj('myChart'),
+          myChartBar = this.getObj('myChartBar')
+
+      this.computedStyle(myChartsize, chartBox)
+      this.computedStyle(myChartBar, chartBoxBar)
       window.onresize = function () {
         this.chartssize(myChartsize, chartBox)
+        this.chartssize(myChartBar, chartBoxBar)
       }
     },
     methods: {
+      getObj(id) {
+          return document.getElementById(id)
+      },
+      computedStyle (obj1, obj2) {
+        obj1.style.width = obj2.style.width
+        obj1.style.height = obj2.style.height
+      },
       getStyle(el, name) {
         if (window.getComputedStyle) {
           return window.getComputedStyle(el, null);
@@ -267,15 +301,100 @@
       toggleList(i) {
         this.index = i
       },
-      drawLine() {
+      drawBar () {
+          let myChartBar = echarts.init(document.getElementById('myChartBar'))
+          myChartBar.setOption({
+              tooltip: {
+                  trigger: 'axis',
+                  axisPointer: {
+                      type: 'cross',
+                      crossStyle: {
+                          color: '#999'
+                      }
+                  }
+              },
+              toolbox: {
+                  feature: {
+                      dataView: {show: true, readOnly: false},
+                      magicType: {show: true, type: ['line', 'bar']},
+                      restore: {show: true},
+                      saveAsImage: {show: true}
+                  }
+              },
+              xAxis: [
+                  {
+                      type: 'category',
+                      data: ['10-20','20-30','30-40','40-50','40-50','40-50'],
+                      axisPointer: {
+                          type: 'shadow'
+                      },
+                      axisTick: {
+                          alignWithLabel: true
+                      },
+                      axisLabel: {
+                          interval: 0
+                      },
+                      offset: 3,
+                      axisLine: {
+                          lineStyle:{
+                              color:'#9b9b9b',
+                              type: 'solid',
+                              width:1,//这里是为了突出显示加上的
+                          }
+
+                      }
+                  }
+              ],
+              yAxis: [
+                  {
+                      type: 'value',
+                      name: '水量',
+                      min: 0,
+                      max: 250,
+                      interval: 50,
+                      axisLabel: {
+                          formatter: '{value} ml'
+                      },
+                      show: false
+                  }
+              ],
+              series: [
+                  {
+                      name:'蒸发量',
+                      type:'bar',
+                      data:[135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                      itemStyle:{
+                          normal:{
+                              color:'#f8b62d'
+                          }
+                      },
+                      barWidth: 10,
+                      barCateGoryGap:20
+                  },
+                  {
+                      name:'降水量',
+                      type:'bar',
+                      data:[175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                      itemStyle:{
+                          normal:{
+                              color:'#4ad2ff'
+                          }
+                      },
+                      barWidth: 10,
+                      barCateGoryGap:20
+                  }
+              ]
+          });
+      },
+      drawRadar() {
         // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('myChart'))
         // 绘制图表
 
         myChart.setOption({
-          title: {
-            text: '历史数据统计'
-          },
+//          title: {
+//            text: '历史数据统计'
+//          },
           tooltip: {},
           legend: {
             data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
@@ -286,16 +405,17 @@
               textStyle: {
                 color: '#1a1a1a',
                 backgroundColor: '#f5f5f5',
-                padding: [3, 5]
+                fontSize: 12
+//                padding: [3, 5]
               }
             },
             indicator: [
-              { name: '信息技术', max: 6500},
-              { name: '信息技术', max: 16000},
-              { name: '信息技术', max: 30000},
-              { name: '信息技术', max: 38000},
-              { name: '信息技术', max: 52000},
-              { name: '信息技术', max: 25000}
+                { name: '场均进球', max: 6500},
+                { name: '场均失误', max: 16000},
+                { name: '场均拦截', max: 30000},
+                { name: '场均失球', max: 38000},
+                { name: '场均跑动距离', max: 52000},
+                { name: '场均机会球', max: 25000}
             ],
             splitArea : {
               show : true,
