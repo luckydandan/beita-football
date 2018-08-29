@@ -31,16 +31,31 @@
                   @click="toggleList(item)"
                   :class="{'nav-current': index == item}"
                 >{{item === 1 ? '进攻频率' : item === 2 ? '阵型战术' : '球队实力'}}</p>
-                <!--<p class="sub-nav-item sub-nav-current">进攻频率</p>-->
-                <!--<p class="sub-nav-item">阵型战术</p>-->
-                <!--<p class="sub-nav-item">球队实力</p>-->
             </nav>
             <div class="team-main mtop">
+                <!--进攻频率-->
                 <div class="team-freq" v-show="index===1">
+                    <!--折线图-->
+                  <div class="chart-shape">
+                    <p class="chart-shape-com s-ye">
+                      <span class="shape shape-1">进攻次数<strong>10</strong></span>
+                      <span class="shape shape-2">威胁进攻<strong>10</strong></span>
+                      <span class="shape shape-3">机会球<strong>10</strong></span>
+                    </p >
+                    <div id="chart-box-l" style="width:3.3rem;height:2.5rem;">
+                      <div id="myChartLine"></div>
+                    </div>
+                    <p class="chart-shape-com s-bl">
+                      <span class="shape shape-1">进攻次数<strong>10</strong></span>
+                      <span class="shape shape-2">威胁进攻<strong>10</strong></span>
+                      <span class="shape shape-3">机会球<strong>10</strong></span>
+                    </p >
+                  </div>
+
                     <div class="chart-box-b pad">
                         <ul class="player-prop">
                             <li>
-                                <div class="player-prop-item ">
+                                <div class="player-prop-item">
                                     <p class="player-prop-text yellow">威胁进攻<br/>转化进球比例</p>
                                     <div class="player-prop-form"></div>
                                 </div>
@@ -54,14 +69,19 @@
                         </ul>
                     </div>
                 </div>
+
+                <!--阵型战术-->
                 <div class="team-info" v-show="index ===2">
-                    <p class="team-main-for"><img src="../../assets/images/pic-ball-2.png" class="all-img" alt=""></p>
-                    <div class="nav-team nav-team-ye mtop">
-                        <span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>
-                        <span class="nav-team-item">客队（巴塞罗那）</span>
+                    <p class="team-main-for">
+                      <img src="../../assets/images/pic-ball-2.png" v-if="fIndex===1" class="all-img" alt="">
+                      <img src="../../assets/images/pic-ball-1.png" v-else class="all-img" alt="">
+                    </p>
+                    <div class="nav-team mtop" :class="fIndex === 1 ? 'nav-team-ye': 'nav-team-blue'">
+                        <span class="nav-team-item" @click="toggleTeam(1)" :class="fIndex === 1 ? 'nav-team-sy' : ''">主队（塞尔塔）</span>
+                        <span class="nav-team-item" @click="toggleTeam(2)"  :class="fIndex === 2 ? 'nav-team-sy' : ''">客队（巴塞罗那）</span>
                     </div>
                     <section class="team-box">
-                        <div class="main-team">
+                        <div v-if="fIndex===1" class="main-team">
                             <div class="main-team-one">
                                 <p class="team-header">
                                     <i class="icon ico-host-score"></i>
@@ -219,13 +239,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main-team" style="display: none;">
+                        <div v-else class="main-team">
                             <div class="main-team-one">
+                              <p class="team-header">
+                                <i class="icon ico-host-score"></i>
+                                <span class="host-text">球员评分</span>
+                              </p>
                                 <div class="scroll">
-                                    <p class="team-header">
-                                        <i class="icon ico-host-score"></i>
-                                        <span class="host-text">球员评分</span>
-                                    </p>
                                     <div class="team-list">
                                         <p class="on-peo blue-l">上场队员</p>
                                         <ul class="on-peo-list">
@@ -379,6 +399,8 @@
                         </div>
                     </section>
                 </div>
+
+                <!--球队实力-->
                 <div v-show="index===3" class="nav-strength">
                     <div class="chart-box-t" id="chart-box-t" style="width:3.3rem;height:2.5rem;">
                         <p class="str-title" style="margin-left: -.1rem">
@@ -410,43 +432,68 @@
   // 引入组件
   require('echarts/lib/chart/radar')
   require('echarts/lib/chart/bar')
-  // 引入提示框和title组件
+  require('echarts/lib/chart/line')
+
+  require('echarts/lib/component/markLine')
   require('echarts/lib/component/tooltip')
   require('echarts/lib/component/title')
+  require('echarts/lib/component/visualMap')
 
   export default {
     data() {
       return {
-        num: 72,
-        index: 1
+        num: 72,  // 进度条
+        index: 1,  // tab索引
+        fIndex: 1  // 切换球队tab索引
       }
     },
     mounted () {
       this.$nextTick(() => {
         this.drawRadar()
         this.drawBar()
+        this.drawLine()
       })
 
       var chartBox = this.getObj('chart-box-t'),
           chartBoxBar = this.getObj('chart-box-b'),
+          chartBoxLine = this.getObj('chart-box-l'),
           myChartsize = this.getObj('myChart'),
-          myChartBar = this.getObj('myChartBar')
+          myChartBar = this.getObj('myChartBar'),
+          myChartLine = this.getObj('myChartLine')
 
       this.computedStyle(myChartsize, chartBox)
       this.computedStyle(myChartBar, chartBoxBar)
+      this.computedStyle(myChartLine, chartBoxLine)
+
       window.onresize = function () {
         this.chartssize(myChartsize, chartBox)
         this.chartssize(myChartBar, chartBoxBar)
+        this.chartssize(myChartLine, chartBoxLine)
       }
     },
     methods: {
+      // 切换tab
+      toggleList(i) {
+        this.index = i
+      },
+
+      // 切换球队
+      toggleTeam (i) {
+        this.fIndex = i
+      },
+
+      // 获取元素
       getObj(id) {
           return document.getElementById(id)
       },
+
+      // 计算属性
       computedStyle (obj1, obj2) {
         obj1.style.width = obj2.style.width
         obj1.style.height = obj2.style.height
       },
+
+      // 兼容处理
       getStyle(el, name) {
         if (window.getComputedStyle) {
           return window.getComputedStyle(el, null);
@@ -459,19 +506,16 @@
         var hi = this.getStyle(container, 'width').height;
         charts.style.width = wi
         charts.style.height = hi
-        console.log(charts.style.width)
-        console.log(charts.style.height)
       },
-      toggleList(i) {
-        this.index = i
-      },
+
+      // 柱状图
       drawBar () {
           let myChartBar = echarts.init(document.getElementById('myChartBar'))
           myChartBar.setOption({
               tooltip: {
                   trigger: 'axis',
                   axisPointer: {
-                      type: 'cross',
+                      // type: 'cross',
                       crossStyle: {
                           color: '#999'
                       }
@@ -511,14 +555,6 @@
               ],
               yAxis: [
                   {
-                      type: 'value',
-                      name: '水量',
-                      min: 0,
-                      max: 250,
-                      interval: 50,
-                      axisLabel: {
-                          formatter: '{value} ml'
-                      },
                       show: false
                   }
               ],
@@ -550,27 +586,22 @@
               ]
           });
       },
+
+      // 雷达图
       drawRadar() {
-        // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('myChart'))
-        // 绘制图表
 
         myChart.setOption({
-//          title: {
-//            text: '历史数据统计'
-//          },
           tooltip: {},
           legend: {
-            data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+            data: ['历史数据统计']
           },
           radar: {
-            // shape: 'circle',
             name: {
               textStyle: {
                 color: '#1a1a1a',
                 backgroundColor: '#f5f5f5',
                 fontSize: 10
-//                padding: [3, 5]
               }
             },
             indicator: [
@@ -591,21 +622,21 @@
               show : true,
               lineStyle : {
                 width : 1,
-                color : ['#e1e1e1','#9a9a9a']
+                color : ['#9a9a9a','#e1e1e1','#e1e1e1','#e1e1e1','#e1e1e1','#9a9a9a']
                 // 图表背景网格线的颜色
               }
             }
           },
           series: [{
-            name: '预算 vs 开销',
+            name: '历史数据统计',
             type: 'radar',
             data : [
               {
                 value : [5000, 14000, 28000, 31000, 42000, 21000],
-                name : '实际开销',
+                name : '历史数据统计',
                 areaStyle: {
                   normal: {
-                    opacity: 1,
+                    opacity: 0.8,
                     color: '#c1d7ef'
                   }
                 },
@@ -623,7 +654,7 @@
                 },
               {
                 value : [4300, 10000, 28000, 35000, 50000, 19000],
-                name : '预算分配',
+                name : '历史数据统计',
                 areaStyle: {
                   normal: {
                     opacity: 0.6,
@@ -644,6 +675,92 @@
               },
             ]
           }]
+        });
+      },
+
+      // 线形图
+      drawLine () {
+        let data = [["0",82],["1",176],["2",153],["3",52],["4",69],["5",113],["6",82],["7",99],["8",53],["9",103],["10",100],["11",73],["12",155],["13",143],["14",155],["15",125],["16",65],["17",65],["18",79],["19",100],["20",126],["21",122],["22",60],["23",85],["24",190],["25",105],["26",108],["27",59],["28",160],["29",111],["30",265],["31",186],["32",118],["33",89],["34",94],["35",77],["36",113],["37",143],["38",157],["39",117],["40",185],["41",119],["42",153],["43",52],["44",69],["45",113],["46",82],["47",99],["48",53],["49",103],["50",100],["51",73],["52",155],["53",143],["54",155],["55",125],["56",65],["57",65],["58",79],["59",100],["60",126],["61",122],["62",60],["63",85],["64",190],["65",105],["66",108],["67",59],["68",160],["69",111],["70",265],["71",186],["72",118],["73",89],["74",94],["75",77],["76",113],["77",143],["78",157],["79",117],["80",185],["81",119],["82",153],["83",52],["84",69],["85",113],["86",82],["87",99],["88",53],["89",103],["90",100]]
+        let myChart = echarts.init(document.getElementById('myChartLine'))
+        myChart.setOption({
+          tooltip: {
+            trigger: 'axis'
+          },
+          xAxis: {
+            data: data.map(function (item) {
+              return item[0];
+            }),
+            splitLine: {
+              show: true
+            },
+            axisTick: {
+              alignWithLabel: true,
+              show: false
+            },
+            axisLabel: {
+              interval: 14,
+              color: '#1a1a1a'
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#d8d8d8'
+              }
+            },
+            boundaryGap: false
+          },
+          yAxis: {
+            splitLine: {
+              show: true
+            },
+            show: false,
+            splitNumber: 1
+          },
+          toolbox: {
+            left: 'center',
+            feature: {
+              dataZoom: {
+                yAxisIndex: 'none'
+              },
+              restore: {},
+              saveAsImage: {}
+            }
+          },
+          visualMap: {
+            pieces: [{
+              min: 10,
+              max: 100,
+              color: '#4a90e2'
+            }],
+            outOfRange: {
+              color: '#f5a623'
+            }
+          },
+          series: {
+            name: '进攻频率',
+            showSymbol: false,
+            type: 'line',
+            smooth: true,
+            data: data.map(function (item) {
+              return item[1];
+            }),
+            markLine: {
+              silent: true,
+              data: [{
+                yAxis: 100
+              }],
+              itemStyle: {
+                normal: {
+                  lineStyle: {
+                    color: '#a6a6a6',
+                    type: 'solid'
+                  },
+                  label: {
+                    show: false
+                  }
+                }
+              }
+            }
+          }
         });
       }
     }
