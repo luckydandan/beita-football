@@ -37,33 +37,53 @@
                 <div class="team-freq" v-show="index===1">
                     <!--折线图-->
                   <div class="chart-shape">
-                    <p class="chart-shape-com s-ye">
-                      <span class="shape shape-1">进攻次数<strong>10</strong></span>
-                      <span class="shape shape-2">威胁进攻<strong>10</strong></span>
-                      <span class="shape shape-3">机会球<strong>10</strong></span>
-                    </p >
-                    <div id="chart-box-l" style="width:3.3rem;height:2.5rem;">
-                      <div id="myChartLine"></div>
-                    </div>
-                    <p class="chart-shape-com s-bl">
-                      <span class="shape shape-1">进攻次数<strong>10</strong></span>
-                      <span class="shape shape-2">威胁进攻<strong>10</strong></span>
-                      <span class="shape shape-3">机会球<strong>10</strong></span>
-                    </p >
+                      <p class="chart-shape-com s-ye">
+                          <span class="shape shape-1">进攻次数<strong>10</strong></span>
+                          <span class="shape shape-2">威胁进攻<strong>10</strong></span>
+                          <span class="shape shape-3">机会球<strong>10</strong></span>
+                      </p >
+                      <div id="chart-box-l" style="width:100%;height: 250px; margin-top:-.3rem; position: relative;">
+                          <div id="myChartLine"></div>
+                          <p class="bgz"></p>
+                          <p class="grey-bg grey-bg1">
+                              <span>塞尔塔</span>
+                          </p>
+                          <p class="grey-bg grey-bg2">
+                              <span>巴萨</span>
+                          </p>
+                          <p class="po-ball ball1"></p>
+                          <p class="po-ball ball2"></p>
+                          <p class="po-ball ball3"></p>
+                      </div>
+                      <p class="chart-shape-com s-bl">
+                          <span class="shape shape-1">进攻次数<strong>10</strong></span>
+                          <span class="shape shape-2">威胁进攻<strong>10</strong></span>
+                          <span class="shape shape-3">机会球<strong>10</strong></span>
+                      </p>
                   </div>
 
-                    <div class="chart-box-b pad">
+                    <div class="chart-box-y pad">
                         <ul class="player-prop">
                             <li>
                                 <div class="player-prop-item">
-                                    <p class="player-prop-text yellow">威胁进攻<br/>转化进球比例</p>
-                                    <div class="player-prop-form"></div>
+                                    <p class="player-prop-text yellow">威胁进攻<br/>转化进球比例</p >
+                                    <div class="player-prop-form" id="chart-box-p" style="width:1.5rem;height:1.5rem;">
+                                        <div id="myChartPie"></div>
+                                    </div>
+                                    <div class="player-prop-form" >
+                                        <div id="myChartPie2"></div>
+                                    </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="player-prop-item ">
-                                    <p class="player-prop-text blue">威胁进攻<br/>转化进球比例</p>
-                                    <div class="player-prop-form"></div>
+                                <div class="player-prop-item">
+                                    <p class="player-prop-text blue">威胁进攻<br/>转化进球比例</p >
+                                    <div class="player-prop-form">
+                                        <div id="myChartPie3"></div>
+                                    </div>
+                                    <div class="player-prop-form" >
+                                        <div id="myChartPie4"></div>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -433,6 +453,7 @@
   require('echarts/lib/chart/radar')
   require('echarts/lib/chart/bar')
   require('echarts/lib/chart/line')
+  require('echarts/lib/chart/pie')
 
   require('echarts/lib/component/markLine')
   require('echarts/lib/component/tooltip')
@@ -452,24 +473,42 @@
         this.drawRadar()
         this.drawBar()
         this.drawLine()
+        this.drawPie('myChartPie', '#f8872e')
+        this.drawPie('myChartPie2', '#69b1d7')
+        this.drawPie('myChartPie3', '#f8872e')
+        this.drawPie('myChartPie4', '#69b1d7')
       })
 
-      var chartBox = this.getObj('chart-box-t'),
-          chartBoxBar = this.getObj('chart-box-b'),
-          chartBoxLine = this.getObj('chart-box-l'),
-          myChartsize = this.getObj('myChart'),
-          myChartBar = this.getObj('myChartBar'),
-          myChartLine = this.getObj('myChartLine')
+        var chartBox = this.getObj('chart-box-t'),
+            chartBoxBar = this.getObj('chart-box-b'),
+            chartBoxLine = this.getObj('chart-box-l'),
+            chartBoxPie = this.getObj('chart-box-p'),
 
-      this.computedStyle(myChartsize, chartBox)
-      this.computedStyle(myChartBar, chartBoxBar)
-      this.computedStyle(myChartLine, chartBoxLine)
+            myChartsize = this.getObj('myChart'),
+            myChartBar = this.getObj('myChartBar'),
+            myChartLine = this.getObj('myChartLine'),
+            myChartPie = this.getObj('myChartPie'),
+            myChartPie2 = this.getObj('myChartPie2'),
+            myChartPie3 = this.getObj('myChartPie3'),
+            myChartPie4 = this.getObj('myChartPie4')
 
-      window.onresize = function () {
-        this.chartssize(myChartsize, chartBox)
-        this.chartssize(myChartBar, chartBoxBar)
-        this.chartssize(myChartLine, chartBoxLine)
-      }
+        this.computedStyle(myChartsize, chartBox)
+        this.computedStyle(myChartBar, chartBoxBar)
+        this.computedStyle(myChartLine, chartBoxLine)
+        this.computedStyle(myChartPie, chartBoxPie)
+        this.computedStyle(myChartPie2, chartBoxPie)
+        this.computedStyle(myChartPie3, chartBoxPie)
+        this.computedStyle(myChartPie4, chartBoxPie)
+
+        window.onresize = function () {
+            this.chartssize(myChartsize, chartBox)
+            this.chartssize(myChartBar, chartBoxBar)
+            this.chartssize(myChartLine, chartBoxLine)
+            this.chartssize(myChartPie, chartBoxPie)
+            this.chartssize(myChartPie2, chartBoxPie)
+            this.chartssize(myChartPie3, chartBoxPie)
+            this.chartssize(myChartPie4, chartBoxPie)
+        }
     },
     methods: {
       // 切换tab
@@ -762,7 +801,82 @@
             }
           }
         });
-      }
+      },
+
+        // 圆环
+        drawPie (id, color) {
+            // 基于准备好的dom，初始化echarts实例
+            let myChart = echarts.init(document.getElementById(id))
+            // 绘制图表
+            // var colors=['#ccc','#f5b031'];
+            var index = 0;
+
+            myChart.setOption({
+                color: [color, '#ccc'],
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data:['总数','进球']
+                },
+                series: [
+                    {
+                        name:'进球',
+                        type:'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center',
+                                formatter : function(param) {
+                                    return param.name !=='总数'?`巴塞罗那\n${param.value}: 100`: ''
+                                },
+                                color :function(){
+                                    return colors[i++];
+                                },
+
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '14',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[
+                            {value:10, name:'进球'},
+                            {value:100, name:'总数'}
+                        ]
+                    }
+                ]
+            });
+            myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: 0});
+
+
+            myChart.on('mouseover',function(e){
+
+                if(e.dataIndex != index){
+
+                    myChart.dispatchAction({type: 'downplay', seriesIndex: 0, dataIndex: index  });
+
+                }
+
+            });
+
+            myChart.on('mouseout',function(e){
+
+                index = e.dataIndex;
+
+                myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: e.dataIndex});
+
+            });
+        }
     }
   }
 </script>

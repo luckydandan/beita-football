@@ -211,6 +211,70 @@
         padding-top: rem(10px);
         border-top: 1px solid #c3c3c3;
     }
+    .chart-box-y {
+        margin: 0 auto;
+        padding-top: rem(10px);
+        border-top: 1px solid #c3c3c3;
+    }
+    .chart-box-l {
+        position: relative;
+    }
+    .bgz {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: rem(100px);
+        height: rem(30px);
+        background: #f5f5f5;
+    }
+    .grey-bg {
+        padding-left: rem(30px);
+        font-size: rem(10px);
+        box-sizing: border-box;
+    }
+    .grey-bg1 {
+        position: absolute;
+        top: 50px;
+        height: rem(18px);
+        width: 100%;
+        background: #d8d8d8;
+        z-index: 0;
+        span {
+            padding-left: 2px;
+            border-left: 2px solid $yellow;
+        }
+    }
+    .grey-bg2 {
+        position: absolute;
+        bottom: 60px;
+        height: rem(18px);
+        width: 100%;
+        background: #d8d8d8;
+        z-index: 0;
+        span {
+            padding-left: 2px;
+            border-left: 2px solid $blue;
+        }
+    }
+    .po-ball {
+        position: absolute;
+        width: rem(15px);
+        height: rem(15px);
+        background: url(../../assets/images/ico-ball.png) no-repeat;
+        background-size: contain;
+    }
+    .ball1 {
+        top: 50px;
+        left: rem(130px);
+    }
+    .ball2 {
+        bottom: 60px;
+        left: rem(130px);
+    }
+    .ball3 {
+        bottom: 60px;
+        left: rem(100px);
+    }
     //进攻频率
     .pad {
         padding: rem(20px) rem($base-padding--horizontal) 0;
@@ -218,8 +282,9 @@
     .player-prop {
         font-size: 0;
         margin-right: rem(-30px);
+        overflow: hidden;
         li {
-            display: inline-block;
+            float: left;
             padding-right: rem(30px);
             width: 50%;
             box-sizing: border-box;
@@ -237,10 +302,6 @@
             font-size: rem(14px);
             //background: #f5a623;
             border-radius: rem(20px);
-        }
-
-        .player-prop-form {
-            height: rem(200px);
         }
     }
     .yellow {
@@ -346,6 +407,7 @@
             }
         }
         .s-bl {
+            margin-top: rem(-20px);
             .shape-1 {
                 position: relative;
                 &:before {
