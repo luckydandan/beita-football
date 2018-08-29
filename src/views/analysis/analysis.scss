@@ -283,7 +283,111 @@
                 }
             }
         }
+
     }
+    .chart-shape {
+        padding: rem(20px) 0;
+        .chart-shape-com {
+            display: flex;
+            padding: 0 rem(30px)
+        }
+        .shape {
+            flex: 1;
+            padding: 0 rem(8px);
+            width: 100%;
+            font-size: rem(12px);
+            color: $color;
+            line-height: 1;
+            box-sizing: border-box;
+            strong {
+                padding-left: 2px;
+                font-size: rem(14px);
+            }
+        }
+        .s-ye {
+            .shape-1 {
+                position: relative;
+                &:before {
+                    content: '';
+                    margin-right: rem(5px);
+                    display: inline-block;
+                    width: rem(12px);
+                    height: rem(12px);
+                    border: 1px solid $yellow;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+            .shape-2 {
+                position: relative;
+                &:before {
+                    content: '';
+                    margin-right: rem(5px);
+                    display: inline-block;
+                    width: rem(12px);
+                    height: rem(12px);
+                    background: url(../../assets/images/ico-combined-yellow.png) no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                }
+            }
+            .shape-3 {
+                position: relative;
+                &:before {
+                    content: '';
+                    margin-right: rem(5px);
+                    display: inline-block;
+                    width: rem(12px);
+                    height: rem(12px);
+                    background: $yellow;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .s-bl {
+            .shape-1 {
+                position: relative;
+                &:before {
+                    content: '';
+                    margin-right: rem(5px);
+                    display: inline-block;
+                    width: rem(12px);
+                    height: rem(12px);
+                    border: 1px solid $blue;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+            .shape-2 {
+                position: relative;
+                &:before {
+                    content: '';
+                    margin-right: rem(5px);
+                    display: inline-block;
+                    width: rem(12px);
+                    height: rem(12px);
+                    background: url(../../assets/images/ico-combined-blue.png) no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                }
+            }
+            .shape-3 {
+                position: relative;
+                &:before {
+                    content: '';
+                    margin-right: rem(5px);
+                    display: inline-block;
+                    width: rem(12px);
+                    height: rem(12px);
+                    background: $blue;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
     .blue-l {
         border-top: rem(4px) solid $blue;
     }
