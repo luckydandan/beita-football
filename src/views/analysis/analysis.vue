@@ -60,164 +60,324 @@
                         <span class="nav-team-item nav-team-sy">主队（塞尔塔）</span>
                         <span class="nav-team-item">客队（巴塞罗那）</span>
                     </div>
-                    <div class="main-team">
-                        <div class="main-team-one">
-                            <div class="scroll">
+                    <section class="team-box">
+                        <div class="main-team">
+                            <div class="main-team-one">
                                 <p class="team-header">
                                     <i class="icon ico-host-score"></i>
                                     <span class="host-text">球员评分</span>
                                 </p>
-                                <div class="team-list">
-                                    <p class="on-peo">上场队员</p>
-                                    <ul class="on-peo-list">
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="team-list">
-                                    <p class="on-peo">替补队员</p>
-                                    <ul class="on-peo-list">
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                    </ul>
+                                <div class="scroll">
+                                    <div class="team-list">
+                                        <p class="on-peo yellow-l">上场队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="team-list">
+                                        <p class="on-peo yellow-l">替补队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="main-team-one">
-                            <div class="scroll">
+                            <div class="main-team-one">
                                 <p class="team-header">
-                                    <i class="icon ico-host-score"></i>
-                                    <span class="host-text">球员评分</span>
+                                    <i class="icon ico-host-report"></i>
+                                    <span class="host-text">球员体能</span>
                                 </p>
-                                <div class="team-list">
-                                    <p class="on-peo">上场队员</p>
-                                    <ul class="on-peo-list">
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="team-list">
-                                    <p class="on-peo">替补队员</p>
-                                    <ul class="on-peo-list">
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                        <li>
-                                            <span>13 xxx</span>
-                                            <span>-6.5</span>
-                                        </li>
-                                    </ul>
+                                <div class="scroll">
+                                    <div class="team-list">
+                                        <p class="on-peo yellow-l">上场队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="team-list">
+                                        <p class="on-peo yellow-l">替补队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="main-team" style="display: none;">
+                            <div class="main-team-one">
+                                <div class="scroll">
+                                    <p class="team-header">
+                                        <i class="icon ico-host-score"></i>
+                                        <span class="host-text">球员评分</span>
+                                    </p>
+                                    <div class="team-list">
+                                        <p class="on-peo blue-l">上场队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="team-list">
+                                        <p class="on-peo blue-l">替补队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-team-one">
+                                <p class="team-header">
+                                    <i class="icon ico-host-report"></i>
+                                    <span class="host-text">球员体能</span>
+                                </p>
+                                <div class="scroll">
+                                    <div class="team-list">
+                                        <p class="on-peo blue-l">上场队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="team-list">
+                                        <p class="on-peo blue-l">替补队员</p>
+                                        <ul class="on-peo-list">
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                            <li>
+                                                <span>13 xxx</span>
+                                                <span>-6.5</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <div v-show="index===3" class="nav-strength">
                     <div class="chart-box-t" id="chart-box-t" style="width:3.3rem;height:2.5rem;">
@@ -233,6 +393,10 @@
                             <span>进球时间发布</span>
                         </p>
                         <div id="myChartBar" style="margin-top:-.5rem;"></div>
+                        <div class="chart-box-info">
+                            <p class="chart-tags">塞尔塔</p>
+                            <p class="chart-tags">巴塞罗那</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -360,7 +524,7 @@
               ],
               series: [
                   {
-                      name:'蒸发量',
+                      name:'塞尔塔',
                       type:'bar',
                       data:[135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
                       itemStyle:{
@@ -372,7 +536,7 @@
                       barCateGoryGap:20
                   },
                   {
-                      name:'降水量',
+                      name:'巴塞罗那',
                       type:'bar',
                       data:[175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
                       itemStyle:{
@@ -405,7 +569,7 @@
               textStyle: {
                 color: '#1a1a1a',
                 backgroundColor: '#f5f5f5',
-                fontSize: 12
+                fontSize: 10
 //                padding: [3, 5]
               }
             },
@@ -441,7 +605,7 @@
                 name : '实际开销',
                 areaStyle: {
                   normal: {
-                    opacity: 0.6,
+                    opacity: 1,
                     color: '#c1d7ef'
                   }
                 },
