@@ -67,10 +67,10 @@
                             <li>
                                 <div class="player-prop-item">
                                     <p class="player-prop-text yellow">威胁进攻<br/>转化进球比例</p >
-                                    <div class="player-prop-form" id="chart-box-p" style="width:1.5rem;height:1.5rem;">
+                                    <div class="player-prop-form" id="chart-box-p" style="width:1.5rem;height:1.5rem; margin-left: -.03rem;">
                                         <div id="myChartPie"></div>
                                     </div>
-                                    <div class="player-prop-form" >
+                                    <div class="player-prop-form"  style="width:1.5rem;height:1.5rem; margin-left: -.03rem;">
                                         <div id="myChartPie2"></div>
                                     </div>
                                 </div>
@@ -78,10 +78,10 @@
                             <li>
                                 <div class="player-prop-item">
                                     <p class="player-prop-text blue">威胁进攻<br/>转化进球比例</p >
-                                    <div class="player-prop-form">
+                                    <div class="player-prop-form" style="width:1.5rem;height:1.5rem; margin-left: -.03rem;">
                                         <div id="myChartPie3"></div>
                                     </div>
-                                    <div class="player-prop-form" >
+                                    <div class="player-prop-form" style="width:1.5rem;height:1.5rem; margin-left: -.03rem;" >
                                         <div id="myChartPie4"></div>
                                     </div>
                                 </div>

@@ -315,8 +315,19 @@ import Calendar from 'vue-calendar-component';
       /*z-index:999;*/
     }
     .wh_content_all {
-      position: absolute;
-      color: #000;
+        position: absolute;
+        color: #000;
+        background-color: #fff !important;
+    }
+    .wh_jiantou1, .wh_jiantou2 {
+        border-color: #707070 !important;
+    }
+    .wh_top_changge li , .wh_content_item, .wh_content_item_tag {
+        color: #4a4a4a !important;
+    }
+    .wh_content_item .wh_isToday {
+        background: #327838 !important;
+        color: #fff !important;
     }
     .main {
       z-index:999;
