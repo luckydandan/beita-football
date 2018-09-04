@@ -27,7 +27,7 @@
         }
     }
     .center-spe {
-        margin: 0 rem(20px)
+        margin: 0 rem(40px)
     }
     .vin-all {
         display: block;
@@ -61,7 +61,7 @@
                 bottom: rem(-5px);
                 left: 0;
                 width: 100%;
-                height: rem(3px);
+                height: rem(5px);
                 background: #f8b62d;
             }
         }
@@ -457,5 +457,14 @@
     }
     .yellow-l {
         border-top: rem(4px) solid $yellow;
+    }
+    .red {
+        background: #d0021b;
+    }
+    .orange {
+        background: #f5a623;
+    }
+    #myChartLine canvas {
+        height: 200px;
     }
 }

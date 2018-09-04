@@ -134,5 +134,23 @@
             vertical-align: middle;
         }
     }
-
+    .ico-yy-time {
+        margin-right: 3px;
+        width: rem(16px);
+        height: rem(16px);
+        background: url(../../assets/images/ico-yy-time.png) no-repeat;
+        background-size: contain;
+        vertical-align: middle;
+    }
+    .mat-time {
+        display: inline-block;
+        font-size: rem(19px);
+        vertical-align: middle;
+        color: $color;
+    }
+    .yy-score {
+        display: inline-block;
+        margin: 0 rem(8px);
+        font-size: 0;
+    }
 }

@@ -165,89 +165,142 @@
               </div>
             </div>
             <div class="live-items" v-else>
-              <p class="live-item-top">2018-09-01 星期四</p>
-              <div class="live-item">
-                <div class="live-item-message">
-                  <p class="message-country tal">塞尔塔</p>
-                  <p class="message-score">
-                    <span class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></span>
-                    <span class="country-score">1-2</span>
-                    <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></span>
-                  </p>
-                  <p class="message-country tar">巴塞罗那</p>
+                <div class="items-box">
+                    <p class="live-item-top">2018-09-01 星期四</p>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="live-process">
-                  <div class="bar" :style="{width: num + '%'}"></div>
-                  <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                  <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                  <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
+                <div class="items-box">
+                    <p class="live-item-top">2018-09-01 星期四</p>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="live-time">
-                  <p class="live-time-d">
-                    <i class="icon ico-time"></i>
-                    <span>比赛时间</span>
-                  </p>
-                  <router-link to="../analysis/analysis" tag="p" class="live-time-m">
-                    <span>比赛分析</span>
-                    <i class="icon ico-link"></i>
-                  </router-link>
+                <div class="items-box">
+                    <p class="live-item-top">2018-09-01 星期四</p>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
+                    <div class="live-item">
+                        <div class="live-item-message">
+                            <p class="message-country tal">塞尔塔</p>
+                            <div class="message-score">
+                                <p class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></p>
+                                <p class="yy-score">
+                                    <i class="icon ico-yy-time"></i>
+                                    <span class="mat-time">20:00</span>
+                                </p>
+                                <p class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></p>
+                            </div>
+                            <p class="message-country tar">巴塞罗那</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="live-item mtop">
-                <div class="live-item-message">
-                  <p class="message-country tal">塞尔塔</p>
-                  <p class="message-score">
-                    <span class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></span>
-                    <span class="country-score">1-2</span>
-                    <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></span>
-                  </p>
-                  <p class="message-country tar">巴塞罗那</p>
-                </div>
-                <div class="live-process">
-                  <div class="bar" :style="{width: num + '%'}"></div>
-                  <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                  <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                  <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                </div>
-                <div class="live-time">
-                  <p class="live-time-d">
-                    <i class="icon ico-time"></i>
-                    <span>比赛时间</span>
-                  </p>
-                  <router-link to="../analysis/analysis" tag="p" class="live-time-m">
-                    <span>比赛分析</span>
-                    <i class="icon ico-link"></i>
-                  </router-link>
-                </div>
-              </div>
-              <div class="live-item mtop">
-                <div class="live-item-message">
-                  <p class="message-country tal">塞尔塔</p>
-                  <p class="message-score">
-                    <span class="country-item"><img src="../../assets/images/logo-Celt.png" alt=""></span>
-                    <span class="country-score">1-2</span>
-                    <span class="country-item"><img src="../../assets/images/logo-Barcelona.png" alt=""></span>
-                  </p>
-                  <p class="message-country tar">巴塞罗那</p>
-                </div>
-                <div class="live-process">
-                  <div class="bar" :style="{width: num + '%'}"></div>
-                  <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                  <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                  <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
-                </div>
-                <div class="live-time">
-                  <p class="live-time-d">
-                    <i class="icon ico-time"></i>
-                    <span>比赛时间</span>
-                  </p>
-                  <router-link to="../analysis/analysis" tag="p" class="live-time-m">
-                    <span>比赛分析</span>
-                    <i class="icon ico-link"></i>
-                  </router-link>
-                </div>
-              </div>
-          </div>
+            </div>
         </section>
     </div>
 </template>

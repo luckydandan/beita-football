@@ -7,7 +7,7 @@
                     <span class="country-name">塞尔塔</span>
                 </div>
                 <div class="an-score-item center-spe">
-                    <span class="vin-score">1-2</span>
+                    <span class="vin-score">1 - 2</span>
                     <span class="vin-all">50:71</span>
                 </div>
                 <div class="an-score-item">
@@ -42,7 +42,7 @@
                           <span class="shape shape-2">威胁进攻<strong>10</strong></span>
                           <span class="shape shape-3">机会球<strong>10</strong></span>
                       </p >
-                      <div id="chart-box-l" style="width:100%;height: 250px; margin-top:-.3rem; position: relative;">
+                      <div id="chart-box-l" style="width:100%;height: 210px; margin-top:-.3rem; position: relative;">
                           <div id="myChartLine"></div>
                           <p class="bgz"></p>
                           <p class="grey-bg grey-bg1">
@@ -66,7 +66,7 @@
                         <ul class="player-prop">
                             <li>
                                 <div class="player-prop-item">
-                                    <p class="player-prop-text yellow">威胁进攻<br/>转化进球比例</p >
+                                    <p class="player-prop-text orange">威胁进攻<br/>转化进球比例</p >
                                     <div class="player-prop-form" id="chart-box-p" style="width:1.5rem;height:1.5rem; margin-left: -.03rem;">
                                         <div id="myChartPie"></div>
                                     </div>
@@ -77,7 +77,7 @@
                             </li>
                             <li>
                                 <div class="player-prop-item">
-                                    <p class="player-prop-text blue">威胁进攻<br/>转化进球比例</p >
+                                    <p class="player-prop-text red">威胁进攻<br/>转化进球比例</p >
                                     <div class="player-prop-form" style="width:1.5rem;height:1.5rem; margin-left: -.03rem;">
                                         <div id="myChartPie3"></div>
                                     </div>
@@ -616,7 +616,7 @@
                       data:[175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
                       itemStyle:{
                           normal:{
-                              color:'#4ad2ff'
+                              color:'#4a90e2'
                           }
                       },
                       barWidth: 10,
@@ -661,7 +661,7 @@
               show : true,
               lineStyle : {
                 width : 1,
-                color : ['#9a9a9a','#e1e1e1','#e1e1e1','#e1e1e1','#e1e1e1','#9a9a9a']
+                color : ['#9a9a9a','#9b9b9b','#9b9b9b','#9b9b9b','#9b9b9b','#9a9a9a']
                 // 图表背景网格线的颜色
               }
             }
@@ -803,80 +803,81 @@
         });
       },
 
-        // 圆环
-        drawPie (id, color) {
-            // 基于准备好的dom，初始化echarts实例
-            let myChart = echarts.init(document.getElementById(id))
-            // 绘制图表
-            // var colors=['#ccc','#f5b031'];
-            var index = 0;
+      // 圆环
+      drawPie (id, color) {
+        // 基于准备好的dom，初始化echarts实例
+        let myChart = echarts.init(document.getElementById(id))
+        // 绘制图表
+        // var colors=['#ccc','#f5b031'];
+        var index = 0;
 
-            myChart.setOption({
-                color: [color, '#ccc'],
-                legend: {
-                    orient: 'vertical',
-                    x: 'left',
-                    data:['总数','进球']
-                },
-                series: [
-                    {
-                        name:'进球',
-                        type:'pie',
-                        radius: ['50%', '70%'],
-                        avoidLabelOverlap: false,
-                        label: {
-                            normal: {
-                                show: false,
-                                position: 'center',
-                                formatter : function(param) {
-                                    return param.name !=='总数'?`巴塞罗那\n${param.value}: 100`: ''
-                                },
-                                color :function(){
-                                    return colors[i++];
-                                },
-
+        myChart.setOption({
+            color: [color, '#ccc'],
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data:['总数','进球']
+            },
+            series: [
+                {
+                    name:'进球',
+                    type:'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center',
+                            formatter : function(param) {
+                                return param.name !=='总数'?`巴塞罗那\n${param.value}: 100`: ''
                             },
-                            emphasis: {
-                                show: true,
-                                textStyle: {
-                                    fontSize: '14',
-                                    fontWeight: 'bold'
-                                }
-                            }
+                            color :function(){
+                                return colors[i++];
+                            },
+
                         },
-                        labelLine: {
-                            normal: {
-                                show: false
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '12',
+                                fontWeight: 'bold',
+                                color:'#1a1a1a'
                             }
-                        },
-                        data:[
-                            {value:10, name:'进球'},
-                            {value:100, name:'总数'}
-                        ]
-                    }
-                ]
-            });
-            myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: 0});
-
-
-            myChart.on('mouseover',function(e){
-
-                if(e.dataIndex != index){
-
-                    myChart.dispatchAction({type: 'downplay', seriesIndex: 0, dataIndex: index  });
-
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[
+                        {value:10, name:'进球'},
+                        {value:100, name:'总数'}
+                    ]
                 }
+            ]
+        });
+        myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: 0});
 
-            });
 
-            myChart.on('mouseout',function(e){
+        myChart.on('mouseover',function(e){
 
-                index = e.dataIndex;
+            if(e.dataIndex != index){
 
-                myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: e.dataIndex});
+                myChart.dispatchAction({type: 'downplay', seriesIndex: 0, dataIndex: index  });
 
-            });
-        }
+            }
+
+        });
+
+        myChart.on('mouseout',function(e){
+
+            index = e.dataIndex;
+
+            myChart.dispatchAction({type: 'highlight',seriesIndex: 0,dataIndex: e.dataIndex});
+
+        });
+    }
     }
   }
 </script>
