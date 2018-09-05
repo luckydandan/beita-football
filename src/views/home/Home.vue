@@ -348,6 +348,9 @@ import Calendar from 'vue-calendar-component';
 </script>
 <style lang="scss">
     @import "./home.scss";
+    .wh_container {
+      max-width: 1000px !important;
+    }
     .c-box {
       width: 100%;
       height: 100%;
