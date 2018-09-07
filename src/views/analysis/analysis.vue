@@ -473,10 +473,10 @@
         this.drawRadar()
         this.drawBar()
         this.drawLine()
-        this.drawPie('myChartPie', 'rgb(255, 158, 68)','rgb(255, 70, 131)')
-        this.drawPie('myChartPie2', 'rgb(255, 158, 68)','rgb(255, 70, 131)')
-        this.drawPie('myChartPie3', 'rgb(255, 158, 68)','rgb(255, 70, 131)')
-        this.drawPie('myChartPie4', 'rgb(255, 158, 68)','rgb(255, 70, 131)')
+        this.drawPie('myChartPie', 'rgb(250, 217, 97)','rgb(247, 107, 28)')
+        this.drawPie('myChartPie2', 'rgb(83, 160, 253)','rgb(180, 236, 81)')
+        this.drawPie('myChartPie3', 'rgb(250, 217, 97)','rgb(247, 107, 28)')
+        this.drawPie('myChartPie4', 'rgb(83, 160, 253)','rgb(180, 236, 81)')
       })
 
       var chartBox = this.getObj('chart-box-t'),
