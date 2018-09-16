@@ -429,12 +429,15 @@
             </p>
             <div id="myChart"></div>
           </div>
-          <div class="chart-box-b" id="chart-box-b" style="width:4rem;height:2rem;margin-left: -.25rem;">
+          <div class="chart-box-b" id="chart-box-b" style="width:4rem;height:200px;margin-left: -.25rem; position: relative">
             <p class="str-title" style="padding-left: .4rem;">
               <i class="icon ico-team-ball"></i>
               <span>进球时间发布</span>
             </p>
-            <div id="myChartBar" style="margin-top:-.5rem;"></div>
+            <div id="myChartBar" style="margin-top:-.5rem;">
+            </div>
+
+            <!--<div class="chart-tick"></div>-->
             <div class="chart-box-info">
               <p class="chart-tags">塞尔塔</p>
               <p class="chart-tags">巴塞罗那</p>
@@ -576,13 +579,16 @@
                 type: 'shadow'
               },
               axisTick: {
+                  show: true,
                 alignWithLabel: true
               },
               axisLabel: {
+                  show: true,
                 interval: 0
               },
               offset: 3,
               axisLine: {
+                show: true,
                 lineStyle:{
                   color:'#9b9b9b',
                   type: 'solid',
@@ -607,8 +613,9 @@
                   color:'#f8b62d'
                 }
               },
-              barWidth: 10,
-              barCateGoryGap:20
+              barWidth: 12,
+              barCateGoryGap:10,
+              barGap: .5
             },
             {
               name:'巴塞罗那',
@@ -619,8 +626,9 @@
                   color:'#4a90e2'
                 }
               },
-              barWidth: 10,
-              barCateGoryGap:20
+              barWidth: 12,
+              barCateGoryGap:10,
+                barGap: .5
             }
           ]
         });
