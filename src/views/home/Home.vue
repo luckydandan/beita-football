@@ -39,7 +39,9 @@
                         <p class="message-country tar">巴塞罗那</p>
                     </div>
                     <div class="live-process">
-                        <div class="bar" :style="{width: num + '%'}"></div>
+                        <div class="bar" :style="{width: num + '%'}">
+                            <time class="bar-pro">12:20</time>
+                        </div>
                         <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                         <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                         <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
@@ -66,7 +68,9 @@
                         <p class="message-country tar">巴塞罗那</p>
                     </div>
                     <div class="live-process">
-                        <div class="bar" :style="{width: num + '%'}"></div>
+                        <div class="bar" :style="{width: num + '%'}">
+                            <time class="bar-pro">12:20</time>
+                        </div>
                         <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                         <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                         <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
@@ -93,7 +97,9 @@
                         <p class="message-country tar">巴塞罗那</p>
                     </div>
                     <div class="live-process">
-                        <div class="bar" :style="{width: num + '%'}"></div>
+                        <div class="bar" :style="{width: num + '%'}">
+                            <time class="bar-pro">12:20</time>
+                        </div>
                         <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                         <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                         <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
@@ -120,7 +126,9 @@
                   <p class="message-country tar">巴塞罗那</p>
                 </div>
                 <div class="live-process">
-                  <div class="bar" :style="{width: num + '%'}"></div>
+                  <div class="bar" :style="{width: num + '%'}">
+                      <time class="bar-pro">12:20</time>
+                  </div>
                   <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                   <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                   <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
@@ -147,7 +155,9 @@
                   <p class="message-country tar">巴塞罗那</p>
                 </div>
                 <div class="live-process">
-                  <div class="bar" :style="{width: num + '%'}"></div>
+                  <div class="bar" :style="{width: num + '%'}">
+                      <time class="bar-pro">12:20</time>
+                  </div>
                   <p class="s-ball t"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                   <p class="s-ball"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
                   <p class="s-ball" style="left: .8rem;"><img src="../../assets/images/ico-ball.png" class="all-img" alt=""></p>
