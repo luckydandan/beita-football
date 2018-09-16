@@ -92,10 +92,32 @@
 
         <!--阵型战术-->
         <div class="team-info" v-show="index ===2">
-          <p class="team-main-for">
-            <img src="../../assets/images/pic-ball-2.png" v-if="fIndex===1" class="all-img" alt="">
-            <img src="../../assets/images/pic-ball-1.png" v-else class="all-img" alt="">
-          </p>
+          <div class="team-main-for">
+              <div class="team-peo n-k" v-if="fIndex===1">
+                  <em>1</em>
+                  <div class="team-peo-an">
+                      <ul class="an-z clr">
+                          <li v-for="item,index in arr" :key="index">
+                              <p class="an-z-single" v-for="child,i in item" :key="i">
+                                  <span>1</span>
+                              </p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="team-peo team-k" v-else>
+                  <em>2</em>
+                  <div class="team-peo-an" style="float:right;">
+                      <ul class="an-z clr">
+                          <li v-for="item,index in arr" :key="index">
+                              <p class="an-z-single" v-for="child,i in item" :key="i">
+                                  <span>1</span>
+                              </p>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
           <div class="nav-team mtop" :class="fIndex === 1 ? 'nav-team-ye': 'nav-team-blue'">
             <span class="nav-team-item" @click="toggleTeam(1)" :class="fIndex === 1 ? 'nav-team-sy' : ''">主队（塞尔塔）</span>
             <span class="nav-team-item" @click="toggleTeam(2)"  :class="fIndex === 2 ? 'nav-team-sy' : ''">客队（巴塞罗那）</span>
@@ -466,10 +488,19 @@
   export default {
     data() {
       return {
+        queue: '1-4-3-1',
+        arr: [],
         num: 72,  // 进度条
         index: 1,  // tab索引
         fIndex: 1  // 切换球队tab索引
       }
+    },
+    created () {
+      this.queue = this.queue.split('-')  // [4,2,3,1]
+      for (let item of this.queue) {
+          this.arr.push(new Array(Number(item)))
+      }
+      console.log(this.arr)
     },
     mounted () {
       this.$nextTick(() => {
